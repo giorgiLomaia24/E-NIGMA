@@ -1,0 +1,146 @@
+
+@model Best.Models.ViewModels.ProductVM
+
+
+
+
+<div class="container form_container">
+
+  
+           <h1 class="mt-4" style="text-align: center;">@(Model.Product?.Id != 0 ? "Update" : "Create") Book</h1>
+
+
+        <form method="post"   style="max-width:500px; margin:auto " class="form"  enctype="multipart/form-data">
+        <input asp-for="Product.Id" hidden>
+         <input asp-for="Product.ImageUrl" hidden>
+
+
+          <div class="mb-3">
+                  <label   asp-for="Product.Author" ></label>
+                  <input  asp-for="Product.Author" type="text" class="form-control" style="max-width: 500px;">
+                  <span asp-validation-for="Product.Author" class="text-danger" ></span>
+               </div>
+               <div class="mb-3">
+                  <label   asp-for="Product.Title" ></label>
+                  <input  asp-for="Product.Title" type="text" class="form-control" style="max-width: 500px;">
+                  <span asp-validation-for="Product.Title" class="text-danger" ></span>
+               </div>
+
+                <div class="mb-3">
+                  <label   asp-for="Product.ISBN" ></label>
+                  <input  asp-for="Product.ISBN" type="text" class="form-control" style="max-width: 500px;">
+                  <span asp-validation-for="Product.ISBN" class="text-danger" ></span>
+               </div>
+                <div class="mb-3">
+                  <label   asp-for="Product.Description" ></label>
+                  <textarea  asp-for="Product.Description" type="text" class="form-control" style="max-width: 500px;"></textarea>
+                  <span asp-validation-for="Product.Description" class="text-danger" ></span>
+               </div>
+                <div class="mb-3">
+                  <label  asp-for="Product.ListPrice"  ></label>
+                  <input asp-for="Product.ListPrice"  class="form-control" style="max-width: 500px;">
+                  <span asp-validation-for="Product.ListPrice" class="text-danger"></span>
+               </div>
+               <div class="mb-3">
+                  <label  asp-for="Product.Price"  ></label>
+                  <input asp-for="Product.Price"  class="form-control" style="max-width: 500px;">
+                  <span asp-validation-for="Product.Price" class="text-danger"></span>
+               </div>
+               <div class="mb-3">
+                  <label  asp-for="Product.Price50"  ></label>
+                  <input asp-for="Product.Price50"  class="form-control" style="max-width: 500px;">
+                  <span asp-validation-for="Product.Price50" class="text-danger"></span>
+               </div>
+               <div class="mb-3">
+                  <label  asp-for="Product.Price100"  ></label>
+                  <input asp-for="Product.Price100"  class="form-control" style="max-width: 500px;">
+                  <span asp-validation-for="Product.Price100" class="text-danger"></span>
+               </div>
+
+               <div class="mb-3">
+                  <label  asp-for="Product.CategoryId"  ></label>
+                  <select asp-for="Product.CategoryId" asp-items="@Model.CategoryList"  class="form-select  form-control" style="max-width: 500px;">
+                     <option value="">--Select Category</option>
+                  </select>
+                  <span asp-validation-for="Product.CategoryId" class="text-danger"></span>
+               </div>
+
+               <div class="mb-3">
+                  <label  asp-for="Product.ImageUrl"  ></label>
+                  <input type="file" name="file" id="fileInput" style="display: none;" accept="image/*">
+                <button type="button" class="btn btn-primary" id="uploadButton">Upload Image</button>
+                <img id="previewImage" src="@(Model.Product?.Id !=null ? Model.Product.ImageUrl : "")" alt="Preview Image" style="display:@(Model.Product != null && Model.Product.Id > 0 ? "block" : "none"); max-width: 300px; max-height: 300px; margin-top:30px">
+
+               </div>
+ <div class="mb-3 radio-group">
+    <label asp-for="Product.Status"></label>
+    <div class="radio-option">
+        <input type="radio" id="new"  value="New" asp-for="Product.Status" />
+        <label for="new">New</label>
+    </div>
+    <div class="radio-option">
+        <input type="radio" id="new"  value="New2" asp-for="Product.Status" />
+        <label for="new">New2</label>
+    </div>
+    <div class="radio-option">
+        <input type="radio" id="featured"  value="Featured" asp-for="Product.Status" />
+        <label for="featured">Featured</label>
+    </div>
+     <div class="radio-option">
+        <input type="radio" id="featured"  value="50off" asp-for="Product.Status" />
+        <label for="featured">50% off</label>
+    </div>
+</div>
+               <div class="row">
+                  <div class="col-6">
+                  <button type="submit" class="btn btn-primary" style="width: 150px;">Save</button>
+                  </div>
+                  <div class="col-6 text-end">
+     <a asp-controller="Product" asp-area="Admin" asp-action="Index" type="button" class="btn btn-success"  > <--  </a>
+
+                  </div>
+               </div>
+        </form>      
+</div>
+
+
+
+@section Scripts {
+<script>
+    // Function to handle the button click event
+    document.getElementById('uploadButton').addEventListener('click', function() {
+        document.getElementById('fileInput').click(); // Trigger the file input
+    });
+
+    // Function to handle file input change event
+    document.getElementById('fileInput').addEventListener('change', function() {
+        var file = this.files[0]; // Get the selected file
+        if (file) {
+            var reader = new FileReader(); // Create a new FileReader
+            reader.onload = function(e) {
+                document.getElementById('previewImage').src = e.target.result; // Set the src attribute of the image to the selected file's data URL
+                document.getElementById('previewImage').style.display = 'block'; // Display the image
+            };
+            reader.readAsDataURL(file); // Read the selected file as a data URL
+        }
+    });
+</script>
+<script>
+  tinymce.init({
+    selector: 'textarea',
+    plugins: 'ai tinycomments mentions anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed permanentpen footnotes advtemplate advtable advcode editimage tableofcontents mergetags powerpaste tinymcespellchecker autocorrect a11ychecker typography inlinecss',
+    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | align lineheight | tinycomments | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+    tinycomments_mode: 'embedded',
+    tinycomments_author: 'Author name',
+    mergetags_list: [
+      { value: 'First.Name', title: 'First Name' },
+      { value: 'Email', title: 'Email' },
+    ],
+    ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
+  });
+</script>
+
+}
+
+
+

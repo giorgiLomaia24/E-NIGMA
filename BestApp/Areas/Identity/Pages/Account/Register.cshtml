@@ -1,0 +1,159 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if(TempData["user"] != null){
+        
+  <div class="alert alert-dismissible alert-success">
+  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  <h6>@TempData["user"]</h6>
+   </div>
+    }
+
+
+
+
+    
+       <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="signup_form  grid" enctype="multipart/form-data">
+        @if (User.IsInRole(Best.Utility.SD.Role_Admin))
+            {
+             <h3 class="login_title">ადმინ პორტალი</h3>
+
+            }else{
+            <h3 class="login_title">რეგისტრაცია</h3>
+
+
+            } 
+        <div class="signup-wrapper">
+
+          <div class="login_group grid">
+            <img src="https://cdn4.iconfinder.com/data/icons/thin-people-users/24/thin-1555_user_profile_avatar_unisex-512.png" id="avatarPreview" class="rounded-circle" style="cursor: pointer;" alt="Avatar">
+            <input asp-for="Input.ImageUrl" type="file" id="avatarUpload" class="form-control" style="display: none;">
+          </div>  
+
+
+        <div class="login_group grid">
+            <label  class="login_label">მეილი</label>
+            <input asp-for="Input.Email" type="email"   aria-required="true" placeholder="შეიყვანეთ თქვენი მეილი" id="login_email" class="login_input">
+            <span asp-validation-for="Input.Email" class="text-danger"></span>
+
+        </div>
+        <div class="login_group grid">
+            <label  class="login_label">მომხმარებლის სახელი</label>
+            <input asp-for="Input.Name" type="text"   aria-required="true" placeholder="შეიყვანეთ მომხმარებლის სახელი" id="login_email" class="login_input">
+            <span asp-validation-for="Input.Name" class="text-danger"></span>
+        </div>
+
+        <div class="login_group grid">
+              <label  class="login_label">ქალაქი</label>
+            <input asp-for="Input.City" type="text"   aria-required="true" placeholder="მიუთითეთ თქვენი ქალაქი" id="login_email" class="login_input">
+            <span asp-validation-for="Input.City" class="text-danger"></span>
+        </div>
+        <div class="login_group grid">
+           <label  class="login_label">რეგიონი</label>
+            <input asp-for="Input.State" type="text"   aria-required="true" placeholder="მიუთითეთ თქვენი რეგიონი" id="login_email" class="login_input">
+            <span asp-validation-for="Input.State" class="text-danger"></span>
+        </div>
+        <div class="login_group grid">
+            <label  class="login_label">მისამართი</label>
+            <input asp-for="Input.StreetAdress" type="text"   aria-required="true" placeholder="მიუთითეთ თქვენი მისამართი" id="login_email" class="login_input">
+            <span asp-validation-for="Input.StreetAdress" class="text-danger"></span>
+        </div>
+        <div class="login_group grid">
+             <label class="login_label">საფოსტო ინდექსი</label>
+            <input asp-for="Input.PostalCode" type="text"   aria-required="true" placeholder="მიუთითეთ თქვენი საფოსტო ინდექსი" id="login_email" class="login_input">
+            <span asp-validation-for="Input.PostalCode" class="text-danger"></span>
+        </div>
+        <div class="login_group grid">
+                <label  class="login_label">პაროლი</label>
+                <input asp-for="Input.Password" class="login_input" autocomplete="new-password" aria-required="true" placeholder="პაროლი" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+        </div>
+       
+        <div class="login_group grid">
+            <label  class="login_label">პაროლის დადასტურება</label>
+            <input asp-for="Input.ConfirmPassword" class="login_input" autocomplete="new-password" aria-required="true" placeholder="გაიმეორეთ პაროლი" />
+            <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+        </div>
+
+         @if (User.IsInRole(Best.Utility.SD.Role_Admin))
+            {
+                <div class="login_group grid">
+                <label  class="login_label" style="display:block">აირჩიეთ როლი</label>
+                <select asp-for="Input.Role" asp-items="@Model.Input.RoleList" id="role_input" class="form-select">
+                    <option  disabled >- Select  Role -</option>
+                </select>
+            </div>
+                <div class="login_group grid">
+              <label  class="login_label utf-567" style="display: none;">რომელი კომპანია?</label>
+                <select asp-for="Input.CompanyId" style="display: none;" id="company_input" asp-items="@Model.Input.CompanyList" class="form-select">
+                    <option  disabled >- Select  Company -</option>
+                </select>
+            </div>
+            }
+    
+    </div>
+
+        <div>
+            <span class="login_sighnup" style="margin-bottom: 20px; margin-top:10px">
+                გაქვთ უკვე ანგარიში? <a asp-action="Login" asp-controller="Account" asp-area="Identity"  class="sign_up_span" id="show_login_button">შესვლა</a>
+            </span>
+            <button id="registerSubmit" type="submit" class="button">რეგისტრაცია</button>
+        </div>
+
+   
+
+
+    </form>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+ <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to handle the button click event
+            document.getElementById('avatarPreview').addEventListener('click', function() {
+                document.getElementById('avatarUpload').click();
+              
+            });
+
+            // Function to handle file input change event
+            document.getElementById('avatarUpload').addEventListener('change', function() {
+                var file = this.files[0]; // Get the selected file
+                if (file) {
+                    var reader = new FileReader(); // Create a new FileReader
+                    reader.onload = function(e) {
+                        document.getElementById('avatarPreview').src = e.target.result; // Set the src attribute of the image to the selected file's data URL
+                        document.getElementById('avatarPreview').style.display = 'block'; // Display the image
+                    };
+                    reader.readAsDataURL(file); // Read the selected file as a data URL
+                }
+            });
+        });
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+       const roleInput = document.getElementById('role_input');
+       
+
+       roleInput.addEventListener('change',function(e){
+           if(e.target.value === 'Company'){
+            document.getElementById('company_input').style.display = "block"
+            document.querySelector('.utf-567').style.display = "block"
+           }else{
+            document.getElementById('company_input').style.display = "none"
+            document.querySelector('.utf-567').style.display = "none"
+
+
+           }
+       })
+});
+
+</script>
+
+}

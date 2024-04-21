@@ -1,0 +1,38 @@
+<form   id="addToCartForm" class="card-wrapper">
+    <input id="productIdC" name="ProductId" type="hidden" value="@Model.ProductId">
+    <div class="card">
+        <!-- card left -->
+        <div class="product-imgs">
+            <div class="img-display">
+                <div class="img-showcase">
+                    <img src="@Model.Product.ImageUrl" alt="shoe image">
+                </div>
+            </div>
+        </div>
+        <!-- card right -->
+        <div class="product-content">
+            <h2 class="product-title">@Model.Product.Title</h2>
+            <a href="#" class="product-link">@Model.Product.Author</a>
+            <div class="product-price">
+                <p class="last-price">ძველი ფასი: <span>Gel @Model.Product.Price</span></p>
+                <p class="new-price">ახალი ფასი: <span>Gel @Model.Product.Price50</span></p>
+            </div>
+            <div class="product-detail">
+                <h2>წინასიტყვაობა: </h2>
+                <p>@Html.Raw(Model.Product.Description)</p>
+                <ul>
+                    <li><i class="ri-shield-check-fill"></i> ძველი ფასი: <span>Gel @Model.Product.Price</span></li>
+                    <li><i class="ri-shield-check-fill"></i> ახალი ფასი: <span>Gel @Model.Product.Price50</span></li>
+                    <li><i class="ri-shield-check-fill"></i> ფასი(100+): <span>Gel @Model.Product.Price100</span></li>
+                    <li><i class="ri-shield-check-fill"></i> ISBN: <span>@Model.Product.ISBN</span></li>
+                </ul>
+            </div>
+            <div class="purchase-info">
+                <input id="countC" name="Count" type="number" min="1" value="1">
+                <button type="button" class="btn" id="addToCartButtonC">კალათაში დამატება <i class="fas fa-shopping-cart"></i></button>
+            </div>
+        </div>
+    </div>
+</form>
+
+

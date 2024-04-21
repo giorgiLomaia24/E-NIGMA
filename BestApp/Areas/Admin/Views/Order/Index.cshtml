@@ -1,0 +1,108 @@
+@{
+    var status = Context.Request.Query["status"];
+}
+
+
+    @if(TempData["success"] != null){
+        
+        <div class="alert alert-dismissible alert-success">
+  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  <h6>@TempData["success"]</h6>
+   </div>
+    }
+
+       @if(TempData["delSuc"] != null){
+        
+        <div class="alert alert-dismissible alert-danger">
+  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  <h6>@TempData["delSuc"]</h6>
+   </div>
+    }
+
+  @* <div class="container">
+
+
+    <div class="row pt-4">
+     <div class="col-6">
+        <h1>All Orders</h1>
+     </div>    
+    </div>
+
+<table id="tblData" class="table table-bordered table-striped">
+    <div class="d-flex justify-content-between pb-5 pt-2">
+        <span></span>
+        <ul class="list-group list-group-horizontal-sm bg-transparent border-none">
+        <a  style="text-decoration: none ;"  class="btn btn-warning border-none" asp-controller="Order" asp-action="Index" asp-route-status="inprocess" >
+            <li class="list-group-item text-white bg-warning">In Process</li>
+        </a>
+        <a  style="text-decoration: none ;" class="btn btn-danger active"  asp-controller="Order" asp-action="Index" asp-route-status="pending" >
+            <li class="list-group-item bg-danger text-white">Payment Pending</li>
+        </a>
+        <a  style="text-decoration: none ;"  class="btn btn-success" asp-controller="Order" asp-action="Index" asp-route-status="completed" >
+            <li class="list-group-item text-white bg-success">Completed</li>
+        </a>
+        <a  style="text-decoration: none ;"  class="btn btn-primary" asp-controller="Order" asp-action="Index" asp-route-status="approved" >
+            <li class="list-group-item bg-primary text-white">Approved</li>
+        </a>
+        <a  style="text-decoration: none ;"  class="btn btn-info" asp-controller="Order" asp-action="Index" asp-route-status="all" >
+            <li class="list-group-item bg-info text-white">All</li>
+        </a>
+        </ul>
+
+
+    </div>
+    <thead>
+    <tr>
+         <th>Book Id</th>
+         <th>Order Id</th>
+    
+        <th>Name</th>
+        <th>Phone Number</th>
+        
+        <th>Email</th>
+        <th>Status</th>
+        <th>Total</th>
+      
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+</div> *@
+
+<section>
+  <!--for demo wrap-->
+  <h1>Fixed Table header</h1>
+
+    <table id="tblData" cellpadding="0" cellspacing="0" border="0">
+    <thead>
+        <tr>
+            <th>Book Id</th>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Total</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+  
+</section>
+
+
+
+
+
+
+
+
+
+@section Scripts {
+    <script src="~/js/order.js"></script>
+}
+

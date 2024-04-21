@@ -1,0 +1,38 @@
+@model Category
+
+
+<div class="container form_container">
+
+  
+        <h1 class="mt-4" style="text-align: center;;">Edit Category</h1>
+       
+
+        <form method="post"   style="max-width:500px; margin:auto ">
+               <div class="mb-3">
+                  <label   asp-for="Name" ></label>
+                  <input  asp-for="Name" type="text" class="form-control" style="max-width: 500px;">
+                  <span asp-validation-for="Name" class="text-danger" ></span>
+               </div>
+                <div class="mb-3">
+                  <label  asp-for="DisplayOrder"  ></label>
+                  <input asp-for="DisplayOrder"  class="form-control" style="max-width: 500px;">
+                  <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+               </div>
+               <div class="row">
+                  <div class="col-6">
+                  <button type="submit" class="btn btn-primary" style="width: 150px;">Save</button>
+                  </div>
+                  <div class="col-6 text-end">
+     <a asp-controller="Category" asp-action="Index" type="button" class="btn btn-success"  > <--  </a>
+
+                  </div>
+               </div>
+        </form>      
+
+   
+
+
+
+</div>
+
+

@@ -1,0 +1,167 @@
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@inject IHttpContextAccessor HttpContextAccessor
+
+
+
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var currentUser = await UserManager.GetUserAsync(User);
+
+        @if (currentUser is ApplicationUser)
+        {
+            var applicationUser = (ApplicationUser)currentUser;
+            @* <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="@applicationUser.Image" alt="User Image" class="rounded-circle" style="width: 50px; height: 50px;" />
+                </a>
+                <ul class="dropdown-menu bg-light">
+                    <li class="nav-item">
+                        User Details
+                    </li>
+                    <li class="nav-item">
+                        <a id="manage" class="dropdown-item text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                            <button id="logout" type="submit" class="dropdown-item text-dark btn btn-link border-0">Logout</button>
+                        </form>
+                    </li>
+                </ul>
+            </li> *@
+
+
+            <div class="profile_container">
+                        <div class="avatar">
+                            <img src="@applicationUser.Image" alt="User Image" id="profile_pic">                
+                          </div>
+                          <div class="profile_dropdown" id="profile_dropdwon">
+                                <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                <button  id="logout" type="submit">გასვლა</button>
+                            </form>   
+                        </div>
+            </div>
+
+              @if (HttpContextAccessor.HttpContext.Session.GetInt32(SD.SessionCart) != null)
+                        {
+                            
+                            <a  asp-area="User" asp-controller="Cart" asp-action="Index" style="display: flex;">
+                            <i class="ri-shopping-cart-line"></i><span style="display:flex; width: 20px;height: 20px; border-radius: 50%; background-color: red; color: white; align-items: center; text-align: center; justify-content: center;margin-left: 9px; font-size: 13px;" id="count_id">@HttpContextAccessor.HttpContext.Session.GetInt32(SD.SessionCart)</span>
+
+                            </a>
+                    
+                        }else{
+                            
+                            <a  asp-area="User" asp-controller="Cart" asp-action="Index">
+                                <i class="ri-shopping-cart-line"></i>
+                            </a>
+                        
+                }
+        }
+        else
+        {
+            var identityUser = (IdentityUser)currentUser;
+            @* <li class="nav-item">
+                <span class="nav-link">@UserManager.GetUserName(User)</span>
+            </li>
+            <li class="nav-item">
+                <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                    <button id="logout" type="submit" class="nav-link btn btn-link border-0">Logout</button>
+                </form>
+            </li> *@
+
+            <div class="profile_container">
+                        <div class="avatar">
+                            <span >@UserManager.GetUserName(User)</span>
+                          </div>
+                          <div class="profile_dropdown" id="profile_dropdwon">
+                                <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                <button  id="logout" type="submit">გასვლა</button>
+                            </form>   
+                        </div>
+            </div>
+        }
+
+
+    }
+    else
+    {
+        @* <li class="nav-item">
+            <a class="nav-link" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        </li> *@
+
+        <div class="login-container">
+                        <i class="ri-user-line login-button" id="login-button"></i>
+                        <div class="auth_dropdown" id="auth_dropdown">
+                            <a class="auth_a" id="register" asp-area="Identity" asp-page="/Account/Register">რეგისტრაცია</a>
+                         <a class="auth_a" id="login" asp-area="Identity" asp-page="/Account/Login">შესვლა</a>
+
+                        </div>
+                    </div>
+    }
+
+
+<!-- ================== modal ====================== -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>ნამდვილად გსურთ გასვლა?</p>
+
+            <div class="modal_footer">
+                <button href="#" class="btn btn-danger">უარყოფა</button>
+                <button href="" class="btn btn-success">გასვლა</button>
+            </div>
+            </div>
+
+          </div>
+
+         <!-- ================= modal ======================= -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+    // Attach click event to logout button
+    var logoutButton = document.getElementById("logout");
+    logoutButton.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent the default form submission
+        showLogoutModal();
+    });
+
+    // Function to show the logout modal
+    function showLogoutModal() {
+        var modal = document.getElementById('myModal');
+        modal.style.display = "block";
+
+        // Attach click event to close button and Decline button
+        var closeModalBtn = modal.querySelector(".close");
+        closeModalBtn.addEventListener("click", closeModal);
+
+        var declineBtn = modal.querySelector(".modal_footer .btn-danger");
+        declineBtn.addEventListener("click", closeModal);
+
+        // Function to close the modal
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // Attach click event to confirm logout button
+        var confirmLogoutBtn = modal.querySelector(".modal_footer .btn-success");
+        confirmLogoutBtn.addEventListener("click", function () {
+            var action = logoutButton.closest("form").getAttribute("action");
+            if (action) {
+                // Submit the logout form when the user confirms logout
+                var form = document.querySelector("form#logoutForm");
+                form.setAttribute("action", action);
+                form.submit();
+            }
+        });
+    }
+});
+
+</script>

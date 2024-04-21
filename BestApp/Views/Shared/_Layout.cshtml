@@ -1,0 +1,398 @@
+﻿@using Best.Utility;
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Book Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.css"
+            integrity="sha512-dUOcWaHA4sUKJgO7lxAQ0ugZiWjiDraYNeNJeRKGOIpEq4vroj1DpKcS3jP0K4Js4v6bXk31AAxAxaYt3Oi9xw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+@* 
+      @if(HttpContextAccessor.HttpContext.Request.Path == "/Admin/Order"){
+     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+
+      }       *@
+    @* <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">  *@
+    <link rel="stylesheet" href="~/css/swiper-bundle.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/BestApp.styles.css" asp-append-version="true" /> *@
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+</head>
+<body>
+ 
+       <!-- ================= HEADER ===================== -->
+
+        <header class="header" id="header">
+
+            <nav class="nav container">
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="nav_logo">
+                    <i class="ri-book-3-line"></i>
+                    E-NIGMA
+                </a>
+                <div class="nav_menu">
+                    <ul class="nav_list">
+                        <li class="nav_item">
+                            <a href="#home" class="nav_link">
+                                <i class="ri-home-2-line"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#featured" class="nav_link">
+                                <i class="ri-book-marked-line"></i>
+                                <span>Featured</span>
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#discount" class="nav_link">
+                                <i class="ri-price-tag-2-line"></i>
+                                <span>Discount</span>
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#author" class="nav_link">
+                                <i class="ri-edit-line"></i>
+                                <span>Authors</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav_actions">
+                     @* dropdown for admin controllers starts from here  *@
+
+                              @if(User.IsInRole(SD.Role_Admin)){
+   
+
+                            <div class="dropdown">
+                        <button class="dropbtn"><i class="ri-customer-service-line"></i></button>
+                        <div class="dropdown-content">
+                            <a  asp-area="Admin" asp-controller="Product" asp-action="Index">Products</a>
+                            <a  asp-area="Admin" asp-controller="Category" asp-action="Index">Categories</a>
+                            <a  asp-area="Admin" asp-controller="Company" asp-action="Index">Companies</a>
+                           <a  asp-area="Identity" asp-page="/Account/Register" >Create User</a>
+
+                        </div>
+                        <a asp-area="Admin" asp-controller="Order" asp-action="Index"> <i class="ri-list-ordered"></i></a>
+
+                      </div>
+                        }
+
+                    @* ends here *@
+                    
+                    <!-- search -->
+                    <i class="ri-search-line search-button" id="search-button"></i>
+                 
+
+
+                  
+
+
+    <partial name="_LoginPartial"/>
+
+
+
+                    <!-- theme button -->
+                    <i class="ri-moon-line change-theme" id="change-theme"></i>
+                   
+                   
+                </div>
+            </nav>
+
+        </header>
+        <!-- ================= HEADER ===================== -->
+
+         <!-- ================= SEARCH ===================== -->
+        <div class="search" id="search-content">
+
+            <div class="search_form">
+                <i class="ri-search-line search-icon" id="searchButton"></i>
+                <input type="search" placeholder="რას ეძებ 🤓?" class="search_input" id="searchQuery">
+
+                <i class="ri-close-line search_close" id="search-close"></i>
+            </div>
+<div id="search-results" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 60px; padding-top:60px"></div>
+<div id="search-results2" style="width:100%"></div>
+
+
+
+        </div>
+        <!-- ================= SEARCH ===================== -->
+
+        <main role="main" class="main">
+            @RenderBody()
+        </main>
+   
+
+    @* <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - BestApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer> *@
+
+         <!-- =====================================  FOOTER ================================ -->
+
+      <footer class="footer ">
+          <div class="footer_container container grid">
+            <a href="" class="footer_logo">
+                <i class="ri-book-3-line"></i>
+                E-NIGMA
+            </a>
+
+            <p class="footer_description">
+            იპოვეთ საუკეთესო წიგნები  <br>
+თქვენი საყვარელი  <br>
+ავტორებისაგან.
+            </p>
+          </div>
+
+          <div class="footer_data grid">
+            <div>
+                <h3 class="footer_title">ღირებულებები</h3>
+                <ul class="footer_links">
+                   <li>
+                    <span class="footer_link">სიმარტივე</span>
+                   </li>
+                   <li>
+                    <span class="footer_link">მოქნილობა</span>
+                   </li>
+                   <li>
+                    <span class="footer_link">კვალიფიკაცია</span>
+                   </li>
+                   <li>
+                    <span class="footer_link"></span>
+                   </li>
+                </ul>
+
+            </div>
+
+
+            <!-- ---------------------------- -->
+
+            <div>
+                <h3 class="footer_title">მთავარი</h3>
+                <ul class="footer_links">
+                   <li>
+                    <a href="#featured" class="footer_link">გამორჩეული</a>
+                   </li>
+                   <li>
+                    <a href="#discount" class="footer_link"> ფასდაკლებები</a>
+                   </li>
+                   <li>
+                    <a href="#author" class="footer_link">ავტორები</a>
+                   </li>
+                 
+                </ul>
+
+            </div>
+            <!-- ----------------------------- -->
+
+              <!-- ---------------------------- -->
+
+              <div>
+                <h3 class="footer_title">კონტაქტი</h3>
+                <ul class="footer_links">
+                   <li>
+                    <address class="footer_address_info"> ლიმა ლიმა <br>
+                        ლიმა 4321, თბილისი </address>
+                   </li>
+                   <li>
+                    <address class="footer_address_info">  e.nigma@email.com <br>
+                        + 995 34343434
+                      </address>
+                   </li>
+                
+                </ul>
+
+            </div>
+            <!-- ----------------------------- -->
+
+            <div>
+                <h3 class="footer_title">სოციალური ქსელები</h3>
+                <div class="footer_social">
+                    <a href="" target="_blank" class="footer_social_link">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+
+                    <a href="" target="_blank" class="footer_social_link">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+
+                    <a href="" target="_blank" class="footer_social_link">
+                        <i class="ri-linkedin-fill"></i>
+                    </a>
+
+                    <a href="" target="_blank" class="footer_social_link">
+                        <i class="ri-linkedin-fill"></i>
+                    </a>
+
+                    <a href="" target="_blank" class="footer_social_link">
+                        <i class="ri-github-fill"></i>
+                    </a>
+
+                </div>
+            </div>
+          </div>
+
+          <div class="footer_copy">
+            &#169; All Rights Reserved By Giorgi Lomaia
+          </div>
+
+      </footer>
+
+
+        <!-- =====================================  FOOTER ================================ -->
+        <script>
+            
+    document.addEventListener('DOMContentLoaded', function() {
+     // redirect fucntionality
+        var currentPath = window.location.pathname;
+        var navLinks = document.querySelectorAll('.nav_link');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                window.location.href = '/' + link.getAttribute('href');
+            })
+        } );
+
+
+
+     // SEARCH FUNCTIONALITY
+      document.getElementById('searchQuery').addEventListener('input', function(event) {
+        document.getElementById('search-results').innerHTML = '';
+                document.getElementById('search-results2').innerHTML = ''
+
+        searchBooks();
+    });
+
+    function searchBooks() {
+        // Get the search query from the input field
+        var query = document.getElementById('searchQuery').value;
+
+        // Make AJAX request to the API endpoint
+        fetch('/User/Home/GetBooksBySearch?query=' + query)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Log the books in the console
+            if(data.length !== 0){
+              data.forEach(book => {
+                var article = document.createElement('article');
+                article.style.border = '1px solid black';
+                article.style.padding = '1.1rem';
+                article.style.boxSizing = 'border-box';
+                article.className = 'book_card swiper-slide';
+                var img = document.createElement('img');
+                img.src = book.imageUrl;
+                img.className = 'book_img';
+                img.alt = 'image';
+                var h2 = document.createElement('h2');
+                h2.className = 'book_title';
+                h2.textContent = book.title;
+
+                var divPrices = document.createElement('div');
+                divPrices.className = 'book_prices';
+
+                var spanDiscount = document.createElement('span');
+                spanDiscount.className = 'book_discount';
+                spanDiscount.textContent = book.listPrice;
+
+                var spanPrice = document.createElement('span');
+                spanPrice.className = 'book_price';
+                spanPrice.textContent = book.price;
+
+                var a = document.createElement('a');
+                a.href = '@Url.Action("Details", "Home", new { area = "User" })?productId=' + book.id;
+                a.className = 'button';
+                a.textContent = 'დეტალურად';
+
+                divPrices.appendChild(spanDiscount);
+                divPrices.appendChild(spanPrice);
+
+                article.appendChild(img);
+                article.appendChild(h2);
+                article.appendChild(divPrices);
+                article.appendChild(a);
+                document.getElementById('search-results').appendChild(article);
+
+              })
+            } else{
+                if(query !== '') {
+                      var h1 = document.createElement('h1');
+                h1.style.width = '100%';
+                h1.style.textAlign = 'center';
+                h1.textContent = 'ვწუხვართ, მაგრამ მითითებული პარამეტრებით ძიება წარუმატებელია';
+                document.getElementById('search-results2').appendChild(h1);
+                }
+               
+
+               
+            }
+           
+        })
+        .catch(error => {
+            console.error('There was an error!', error);
+            // Handle errors, e.g., show an error message to the user
+        });
+    }
+
+    // add to cart functionality
+    document.getElementById('addToCartButtonC').addEventListener('click', addToCart);
+
+    function addToCart() {
+        var productId = document.getElementById("productIdC").value;
+        var count = document.getElementById("countC").value;
+        var countSpan = document.getElementById("count_id");
+
+        var data = {
+            ProductId: productId,
+            Count: count
+        };
+
+        // Make AJAX request to the API endpoint
+        fetch('@Url.Action("AddToCartHT", "Home", new { area = "User" })', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            countSpan.innerText = '';
+            countSpan.innerText =  data.cartCount;
+        })
+        .catch(error => {
+            console.error('There was an error!', error);
+            // Handle errors, e.g., show an error message to the user
+        });
+    }
+});
+
+</script>
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/scrollreveal.min.js"></script>
+    <script src="~/js/swiper-bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="//cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js" asp-append-version="true"></script>
+    <script src="https://cdn.tiny.cloud/1/jmx1zzrm5rffi7cz6spul6xrv64el7p41c940qca41830ql9/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+
+    
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

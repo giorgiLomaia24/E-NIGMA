@@ -1,0 +1,85 @@
+
+  @model Best.Models.ViewModels.ShoppingCartVm
+
+<div class="main">
+    <form class="basket" method="post">
+        <div class="basket-module">
+            <div class="basket-labels">
+                <ul>
+                    <li class="item item-heading">წიგნი</li>
+                    <li class="price">ფასი</li>
+                    <li class="quantity">რაოდენობა</li>
+                </ul>
+            </div>
+
+            @if (Model.ShoppingCartList != null)
+            {
+                @foreach (var item in Model.ShoppingCartList)
+                {
+                    <div class="basket-product">
+                        <div class="item">
+                            <div class="product-image">
+                                <img src="@item.Product.ImageUrl" alt="Placholder Image 2" class="product-frame">
+                            </div>
+                            <div class="product-details">
+                                <h1><strong><span class="item-quantity">@item.Count</span> x </strong> @item.Product.Title</h1>
+                                <p>ISBN -  @item.Product.ISBN</p>
+                            </div>
+                        </div>
+                        <div class="price">  @item.Price</div>
+                        <div class="w-75 btn-group" role="group">
+                            <a asp-action="Plus" asp-area="User" asp-controller="Cart" asp-route-cartid="@item.Id" class="btn btn-outline-primary bg-gradient py-2 plus-button">
+                                <i class="ri-add-line"></i>
+                            </a> &nbsp;
+                            <a asp-action="Minus" asp-area="User" asp-controller="Cart" asp-route-cartid="@item.Id" class="btn btn-outline-primary bg-gradient py-2 minus-button">
+                                <i class="ri-subtract-line"></i>
+                            </a>
+                        </div>
+                        <div class="remove">
+                            <a asp-action="RemoveFromCart" asp-area="User" asp-controller="Cart" asp-route-cartid="@item.Id" class="btn btn-danger remove-button">წაშლა</a>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>No items in the shopping cart.</p>
+            }
+
+        </div>
+       <aside class="summary_aside">
+                <div class="summary">
+                  <div class="summary-total-items"><span class="total-items"></span> თქვენი კალათის ჯამი</div>
+                  <div class="summary-subtotal">
+                    <div class="subtotal-title">მთლიანობაში</div>
+                    @foreach(var item in Model.ShoppingCartList){
+
+                    <div style="display: block;" class="subtotal-value final-value" id="basket-subtotal">GEl @(item.Price * item.Count)</div>   
+
+
+                    }   
+                  </div>
+                 
+                  <div class="summary-total">
+                    <div class="total-title">ჯამი</div>
+                    <div class="total-value final-value" id="basket-total">GEL @Model.OrderHeader.OrderTotal</div>
+                  </div>
+                  <div class="summary-checkout">
+                    <a asp-area="User" asp-controller="Cart" asp-action="Summary" type="submit" class="checkout-cta">უსაფრთხო გადახდის ველზე გადასვლა</a>
+                  </div>
+                </div>
+              </aside>
+    </form>
+</div>
+
+
+
+
+
+      
+
+
+
+
+
+

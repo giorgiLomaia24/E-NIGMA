@@ -1,0 +1,317 @@
+﻿@model Best.Models.ViewModels.HomeVM
+
+
+   
+@* 
+    <div class="row pb-3">
+         @foreach(var product in Model){
+            <div class="col-lg-3 col-sm-6">
+                <div class="row p-2">
+                    <div class="col-12 p-1">
+                        <div class="card border-0 p-3 shadow border-top border-5 rounded">
+                            <img src="@product.ImageUrl" class="card-img-top rounded"/>
+                            <div class="card-body pb-0">
+                                <div class="pl-1">
+                                    <p class="card-title h5 text-dark opacity-75 text-uppercase text-center">@product.Title</p>
+                                    <p class="text-title text-warning text-center">By @product.Author</p>
+                                </div>
+                                <div class="pl-1">
+                                    <p class=" text-dark text-opacity-75 text-center mb-0" >List price: $<code class="text-decoration-line-through mb-0">@product.ListPrice</code></p>
+                                </div>
+                                <div class="pl-1">
+                                    <p class=" text-dark text-opacity-75 text-center">As low as: $<code>@product.Price100</code></p>
+                                </div>
+                            </div>
+                            <div>
+                            <a asp-action="Details" asp-controller="Home" asp-route-productId="@product.Id" class="btn btn-primary bg-gradient border-0 form-control">Details</a>
+                        </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+         }
+    </div> *@
+
+<section class="home section" id="home">
+                <div class="home_container container grid">
+                    <div class="home_data">
+                        <h1 class="home_title">
+                            ეძიე & <br>
+                          აარჩიე E-nigma
+                        </h1>
+                        <p class="home_description">
+                         
+                            იპოვეთ საუკეთესო წიგნები თქვენი საყვარელი ავტორებისაგან,
+                            აღმოაჩინეთ ათასობით ახალი წიგნი ყველა შესაძლო კატეგორიით 50%-მდე 
+                            ფასდაკლებით და კიდევ სხვა შეღავათებებით.
+                        </p>
+                    </div>
+                    <div class="home_images">
+                        <div class="home_swiper  swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                @foreach(var product in Model.Products){
+                                   <article class="home_article swiper-slide">
+                                    <img src="@product.ImageUrl" alt="image" class="home_image">
+                                </article>
+                                }
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+             <!--  servicies -->
+
+
+            <section class="servicies section" id="servicies">
+
+                <div class="servicies_container container grid">
+                    <article class="servicies_card">
+                        <i class="ri-truck-fill"></i>
+                        <h3 class="servicies_title">უფასო მიტანა</h3>
+                        <p class="servicies_description"> 100GEL მეტ შეკვეთაზე</p>
+                    </article>
+
+                    <article class="servicies_card">
+                        <i class="ri-lock-2-fill"></i>
+                        <h3 class="servicies_title">უსაფრთხო გადახდა</h3>
+                        <p class="servicies_description">100% უსაფრთხო გადახდა</p>
+                    </article>
+
+                    <article class="servicies_card">
+                        <i class="ri-customer-service-2-fill"></i>
+                        <h3 class="servicies_title">24/7 მხარდაჭერა</h3>
+                        <p class="servicies_description">დაგვირეკეთ ნებისმიერ დროს</p>
+                    </article>
+
+                </div>
+            </section>
+
+
+            <!-- featured -->
+
+
+            <section class="featured section" id="featured">
+                <h2 class="section-title">გამორჩეული</h2>
+
+                <div class="featured_container container">
+                    <div class="featured_swiper swiper">
+                        <div class="swiper-wrapper">
+
+                            @foreach(var featured in Model.Featured){
+                                <article class="featured_card swiper-slide">
+                                <img src="@featured.ImageUrl" class="featured_img" alt="image">
+                                <h2 class="featured_title">@featured.Title</h2>
+                                <div class="featured_prices">
+                                    <span class="featured_discount">@featured.ListPrice</span>
+                                    <span class="featured_price">@featured.Price50</span>
+                                </div>
+                                <a  asp-action="Details" asp-controller="Home" asp-route-productId="@featured.Id" class="button">დეტალურად</a>
+                              
+                            </article>
+                            }
+
+                          
+                          
+
+                            
+                        </div>
+
+                        <div class="swiper-button-prev">
+                            <i class="ri-arrow-left-line"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="ri-arrow-right-line"></i>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- discount -->
+
+
+
+            <section class="discount section" id="discount">
+                <div class="discount_container container grid">
+                    <div class="discount_data">
+
+                        <h2 class="discount_title section_title">50%-მდე ფასდაკლება</h2>
+                        <p class="discount_description">
+                                    იპოვეთ საუკეთესო წიგნები თქვენი საყვარელი ავტორებისაგან,
+                            აღმოაჩინეთ ათასობით ახალი წიგნი ყველა შესაძლო კატეგორიით 50%-მდე 
+                            ფასდაკლებით და კიდევ სხვა შეღავათებებით.
+                        </p>
+                     </div>
+                     <div class="discount_images">
+                @{
+    int imageIndex = 1; 
+}
+
+@foreach (var off50Image in Model.Off50)
+{
+    <img asp-action="Details" asp-controller="Home" asp-route-productId="@off50Image.Id"  src="@off50Image.ImageUrl" alt="image" class="discount_img-@imageIndex">
+    {
+        // Increment index for the next image
+        imageIndex++;
+    }
+}
+
+                     </div>
+                </div>
+            </section>
+
+            <!-- new books -->
+
+            <div class="new section" id="new">
+                <h2 class="section-title">ახალი წიგნები</h2>
+
+                <div class="new_container container">
+                      <div class="new_swiper swiper">
+                        <div class="swiper-wrapper">
+                            <!-- card 1 -->
+                            
+
+                            @foreach(var newBook in Model.New2){
+                                  <a asp-action="Details" asp-controller="Home" asp-route-productId="@newBook.Id" class="new_card swiper-slide">
+                                <img src="@newBook.ImageUrl" alt="image" class="new_img">
+                                <div>
+                                    <h2 class="new_title">@newBook.Title</h2>
+                                    <div class="new_prices">
+                                        <span class="new_discount">@newBook.ListPrice</span>
+                                        <span class="new_price">@newBook.Price50</span>
+                                    </div>
+                                </div>
+                            </a>
+                            }
+
+
+                               
+
+                    
+                        </div>
+
+                        <div class="swiper-button-prev">
+                            <i class="ri-arrow-left-line"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="ri-arrow-right-line"></i>
+                        </div>
+                      </div>
+                </div>
+
+
+                <div class="new_container container">
+                    <div class="new_swiper swiper">
+                      <div class="swiper-wrapper">
+                          <!-- card 1 -->
+                                   @foreach(var newBook in Model.New){
+                                  <a asp-action="Details" asp-controller="Home" asp-route-productId="@newBook.Id" class="new_card swiper-slide">
+                                <img src="@newBook.ImageUrl" alt="image" class="new_img">
+                                <div>
+                                    <h2 class="new_title">@newBook.Title</h2>
+                                    <div class="new_prices">
+                                        <span class="new_discount">@newBook.ListPrice</span>
+                                        <span class="new_price">@newBook.Price50</span>
+                                    </div>
+                                </div>
+                            </a>
+                            }
+
+                  
+                      </div>
+
+                      <div class="swiper-button-prev">
+                          <i class="ri-arrow-left-line"></i>
+                      </div>
+                      <div class="swiper-button-next">
+                          <i class="ri-arrow-right-line"></i>
+                      </div>
+                    </div>
+              </div>
+            </div>
+
+
+            <!-- join -->
+
+            <section class="join section" style="height: 450px; background-color:black">
+                <div class="join_container" style="width: 100%;">
+                    <div  style="display: flex; justify-content:center;width:100%">
+                        <h2 class="join_title section-title"> გაზარდე ცნობიერება E-NIGMA-სთან ერთად <br>არ შეუშინდე სიაახლეებს</h2>
+                        
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="testimonial section" id="author">
+                <h2 class="section-title">თანამედროვე ავტორები</h2>
+
+                <div class="testimonial_container container">
+
+                <div class="testimonial_swiper swiper">
+
+                    <div class="swiper-wrapper">
+                        <!-- card 1 -->
+                        <article class="testimonial_card swiper-slide">
+                            <img src="https://publika.ge/app/uploads/2020/03/publika.ge-5--.jpg" alt="profile-pic" class="testimonial_img">
+                            <h2 class="testimonial_title">ზაზა ბურჭულაძე</h2>
+                            <p class="testimonial_description">
+
+"მინერალური ჯაზი" არის ქართული პოსტმოდერნისტული რომანი, რომელიც შემდეგი განმადიდება. რომანი კითხულობს ტრაგიკომედიის, საძიებო დეტექტივის და კარნავალის სთულებისა და სერიოზული ჯაზური იმპროვიზაციას, როგორც წერენ ფიუჟენის სტილში. ეს წიგნი გამოიცავს ხალხურ სიმღერებს და ვირტუოზულ არანჟირებას.
+                            </p>
+                        </article>
+
+                         <!-- card 2 -->
+                         <article class="testimonial_card swiper-slide">
+                            <img src="https://publika.ge/app/uploads/2020/03/publika.ge-5--1-1-768x768.jpg" alt="profile-pic" class="testimonial_img">
+                            <h2 class="testimonial_title">ლაშა ბუღაძე</h2>
+                            <p class="testimonial_description">
+                             ლაშა ბუღაძე ძალიან ცნობილი და გამორჩეული ავტორი გახლავთ: მას ჩვენ ვიცნობთ როგორც საზოგადო მოღვაწეს, როგორც სატელევიზიო სახეს, როგორც დრამატურგს, რომელსაც უამრავი პიესა აქვს დაწერილი: „ყუთი”, „საუკუნის მკვლელობა”, „მესამე სართული”; საინტერესო იყო მისი „დიალოგი ცენზურაზე”. აქვს მთელი ციკლი გადაცემებისა, „25 პატარა პიესა”, „ნაფტალინი”, „ოთარი და სხვა პიესები”, „ის სკამი და ეს საწოლი” – პოლიტიკური პიესა და ა.შ და ა.შ.
+                            </p>
+                        </article>
+
+                         <!-- card 3 -->
+                         <article class="testimonial_card swiper-slide" >
+                            <img src="https://publika.ge/app/uploads/2020/03/publika.ge-5--1-3.jpg" alt="profile-pic" class="testimonial_img" >
+                            <h2 class="testimonial_title"> აკა მორჩილაძე</h2>
+                            <p class="testimonial_description">
+
+ტექსტში აღწერილია, როგორ იცის თვითონვების გადაცემა ტრაგედიიდან კომედიაში, რომელიც მოხდება მოდის კარის თავის საკითხზე. ავტორი აღწერს თეატრში სასაზრისო სიტუაციას, სადაც რეალობა შეიძლება წარმოადგენდეს ტრაგედიის, მაგრამ ხელმძღვანელებმა იხელმძღვანედ იღებენ მისი არგუმენტების საზრისო მნიშვნელობას. ამონებს, რაც საკუთარიანი ბადები სტალინის დროსაში გადაყვანს კომედიის საქმეს.
+                            </p>
+                        </article>
+
+                         <!-- card 4 -->
+                         <article class="testimonial_card swiper-slide">
+                            <img src="https://publika.ge/app/uploads/2020/03/publika.ge-5--1-2.jpg" alt="profile-pic" class="testimonial_img">
+                            <h2 class="testimonial_title">გურამ დოჩანაშვილი</h2>
+                            <p class="testimonial_description">
+                                გურამ დოჩანაშვილს, ჩვენს ცოცხალ კლასიკოსს ანბანით რიგით მესამე ადგილი ერგო, თუმცა, ბუნებრივია, ის აბსოლუტური ჩემპიონია ამ სიისა. აუცილებლად შევეხები მის სამ დიდ ნაწარმოებს და ორ მოთხრობას.
+
+უპირველეს ყოვლისა, ეს არის 2002 წელს გამოცემული „ლოდი ნასაყდრალი“, ძალიან რთული წიგნი, რომელშიც სერიოზული საკითხები დაისვა და სრულიად სახეცვლილი სტილით წარდგა მწერალი, რომელიც მანამდე სხვა რამეებით იყო ცნობილი. ენობრივმა ექსპერიმენტებმა, ჩემი აზრით, ამ ძალიან რთულ რომანში განსაკუთრებულ სიმაღლეს მიაღწია.
+                            </p>
+                        </article>
+
+
+                    </div>
+
+
+                    <div class="swiper-button-prev">
+                        <i class="ri-arrow-left-line"></i>
+                    </div>
+                    <div class="swiper-button-next">
+                        <i class="ri-arrow-right-line"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            </section>

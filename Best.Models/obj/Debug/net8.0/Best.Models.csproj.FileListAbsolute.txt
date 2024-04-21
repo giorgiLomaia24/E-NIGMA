@@ -1,0 +1,11 @@
+/Users/admin/Desktop/net/Best/Best.Models/bin/Debug/net8.0/Best.Models.deps.json
+/Users/admin/Desktop/net/Best/Best.Models/bin/Debug/net8.0/Best.Models.dll
+/Users/admin/Desktop/net/Best/Best.Models/bin/Debug/net8.0/Best.Models.pdb
+/Users/admin/Desktop/net/Best/Best.Models/obj/Debug/net8.0/Best.Models.GeneratedMSBuildEditorConfig.editorconfig
+/Users/admin/Desktop/net/Best/Best.Models/obj/Debug/net8.0/Best.Models.AssemblyInfoInputs.cache
+/Users/admin/Desktop/net/Best/Best.Models/obj/Debug/net8.0/Best.Models.AssemblyInfo.cs
+/Users/admin/Desktop/net/Best/Best.Models/obj/Debug/net8.0/Best.Models.csproj.CoreCompileInputs.cache
+/Users/admin/Desktop/net/Best/Best.Models/obj/Debug/net8.0/Best.Models.dll
+/Users/admin/Desktop/net/Best/Best.Models/obj/Debug/net8.0/refint/Best.Models.dll
+/Users/admin/Desktop/net/Best/Best.Models/obj/Debug/net8.0/Best.Models.pdb
+/Users/admin/Desktop/net/Best/Best.Models/obj/Debug/net8.0/ref/Best.Models.dll

@@ -1,0 +1,12 @@
+/Users/admin/Desktop/net/Best/Best.Utility/bin/Debug/net8.0/Best.Utility.deps.json
+/Users/admin/Desktop/net/Best/Best.Utility/bin/Debug/net8.0/Best.Utility.dll
+/Users/admin/Desktop/net/Best/Best.Utility/bin/Debug/net8.0/Best.Utility.pdb
+/Users/admin/Desktop/net/Best/Best.Utility/obj/Debug/net8.0/Best.Utility.GeneratedMSBuildEditorConfig.editorconfig
+/Users/admin/Desktop/net/Best/Best.Utility/obj/Debug/net8.0/Best.Utility.AssemblyInfoInputs.cache
+/Users/admin/Desktop/net/Best/Best.Utility/obj/Debug/net8.0/Best.Utility.AssemblyInfo.cs
+/Users/admin/Desktop/net/Best/Best.Utility/obj/Debug/net8.0/Best.Utility.csproj.CoreCompileInputs.cache
+/Users/admin/Desktop/net/Best/Best.Utility/obj/Debug/net8.0/Best.Utility.dll
+/Users/admin/Desktop/net/Best/Best.Utility/obj/Debug/net8.0/refint/Best.Utility.dll
+/Users/admin/Desktop/net/Best/Best.Utility/obj/Debug/net8.0/Best.Utility.pdb
+/Users/admin/Desktop/net/Best/Best.Utility/obj/Debug/net8.0/ref/Best.Utility.dll
+/Users/admin/Desktop/net/Best/Best.Utility/obj/Debug/net8.0/Best.Utility.csproj.AssemblyReference.cache

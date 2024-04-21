@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "HGr0AtFB9N2icQSZX1djCuqvAUkaVav7Sk4FZHkEhLEMKkM+y9Df+5Ob7gTbbgyi0agB2Z2wlfttlLeVUrGcUg==",
+  "success": true,
+  "projectFilePath": "/Users/admin/Desktop/net/Best/Best.Utility/Best.Utility.csproj",
+  "expectedPackageFiles": [
+    "/Users/admin/.nuget/packages/microsoft.aspnetcore.cryptography.internal/8.0.1/microsoft.aspnetcore.cryptography.internal.8.0.1.nupkg.sha512",
+    "/Users/admin/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/8.0.1/microsoft.aspnetcore.cryptography.keyderivation.8.0.1.nupkg.sha512",
+    "/Users/admin/.nuget/packages/microsoft.aspnetcore.identity.ui/8.0.1/microsoft.aspnetcore.identity.ui.8.0.1.nupkg.sha512",
+    "/Users/admin/.nuget/packages/microsoft.extensions.caching.abstractions/8.0.0/microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
+    "/Users/admin/.nuget/packages/microsoft.extensions.dependencyinjection/8.0.0/microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "/Users/admin/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/Users/admin/.nuget/packages/microsoft.extensions.fileproviders.abstractions/8.0.0/microsoft.extensions.fileproviders.abstractions.8.0.0.nupkg.sha512",
+    "/Users/admin/.nuget/packages/microsoft.extensions.fileproviders.embedded/8.0.1/microsoft.extensions.fileproviders.embedded.8.0.1.nupkg.sha512",
+    "/Users/admin/.nuget/packages/microsoft.extensions.identity.core/8.0.1/microsoft.extensions.identity.core.8.0.1.nupkg.sha512",
+    "/Users/admin/.nuget/packages/microsoft.extensions.identity.stores/8.0.1/microsoft.extensions.identity.stores.8.0.1.nupkg.sha512",
+    "/Users/admin/.nuget/packages/microsoft.extensions.logging/8.0.0/microsoft.extensions.logging.8.0.0.nupkg.sha512",
+    "/Users/admin/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "/Users/admin/.nuget/packages/microsoft.extensions.options/8.0.1/microsoft.extensions.options.8.0.1.nupkg.sha512",
+    "/Users/admin/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

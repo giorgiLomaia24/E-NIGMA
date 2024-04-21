@@ -1,0 +1,449 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/obj/Debug/net8.0/scopedcss/projectbundle/BestApp.bundle.scp.css",
+      "PackagePath": "staticwebassets/BestApp.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/css/swiper-bundle.min.css",
+      "PackagePath": "staticwebassets/css/swiper-bundle.min.css"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/03b3c11e-8306-4b3e-8c17-41db8a234301.jpg",
+      "PackagePath": "staticwebassets/images/product/03b3c11e-8306-4b3e-8c17-41db8a234301.jpg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/04581601-266f-417e-bc4b-c59a0e5b21e6.jpeg",
+      "PackagePath": "staticwebassets/images/product/04581601-266f-417e-bc4b-c59a0e5b21e6.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/130f361a-dfc8-4705-b3ad-421d7acfceb8.jpeg",
+      "PackagePath": "staticwebassets/images/product/130f361a-dfc8-4705-b3ad-421d7acfceb8.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/15db8ff4-254e-4744-85f2-aeaaf9dcf65b.jpeg",
+      "PackagePath": "staticwebassets/images/product/15db8ff4-254e-4744-85f2-aeaaf9dcf65b.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/2a66a4fc-c964-4141-8671-39b0dce81503.png",
+      "PackagePath": "staticwebassets/images/product/2a66a4fc-c964-4141-8671-39b0dce81503.png"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/2b3a3705-bd5a-40e6-8798-1df6a9109f65.jpeg",
+      "PackagePath": "staticwebassets/images/product/2b3a3705-bd5a-40e6-8798-1df6a9109f65.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/30d78bdc-79b2-4e16-bb92-29551ecf18c6.jpeg",
+      "PackagePath": "staticwebassets/images/product/30d78bdc-79b2-4e16-bb92-29551ecf18c6.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/32311d28-4a11-4532-a659-408596439546.jpeg",
+      "PackagePath": "staticwebassets/images/product/32311d28-4a11-4532-a659-408596439546.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/3839e294-bc45-4e3f-bd95-56ee6b19588a.jpeg",
+      "PackagePath": "staticwebassets/images/product/3839e294-bc45-4e3f-bd95-56ee6b19588a.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/39ba670f-4c3c-476e-bc85-2ea21c0f0518.jpeg",
+      "PackagePath": "staticwebassets/images/product/39ba670f-4c3c-476e-bc85-2ea21c0f0518.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/4320a8df-d123-4a26-8184-d711e77d05fa.jpeg",
+      "PackagePath": "staticwebassets/images/product/4320a8df-d123-4a26-8184-d711e77d05fa.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/454ffc6d-0413-4828-b67d-ca568e9ccb23.jpeg",
+      "PackagePath": "staticwebassets/images/product/454ffc6d-0413-4828-b67d-ca568e9ccb23.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/475e24c5-8991-4801-9347-7501448f1ce6.jpeg",
+      "PackagePath": "staticwebassets/images/product/475e24c5-8991-4801-9347-7501448f1ce6.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/5818618a-a184-45f5-bc7e-6376a7167b2c.jpeg",
+      "PackagePath": "staticwebassets/images/product/5818618a-a184-45f5-bc7e-6376a7167b2c.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/5ae607a7-3cae-438c-a430-acb21e548229.png",
+      "PackagePath": "staticwebassets/images/product/5ae607a7-3cae-438c-a430-acb21e548229.png"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/5f946f06-8dee-4516-983a-455c8b250aa1.jpeg",
+      "PackagePath": "staticwebassets/images/product/5f946f06-8dee-4516-983a-455c8b250aa1.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/65566d45-cb13-4b44-8c38-f65a448db284.jpeg",
+      "PackagePath": "staticwebassets/images/product/65566d45-cb13-4b44-8c38-f65a448db284.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/6ecde438-24ff-4a55-97b6-3af6ecdd4b99.jpeg",
+      "PackagePath": "staticwebassets/images/product/6ecde438-24ff-4a55-97b6-3af6ecdd4b99.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/725ef85c-a0e3-4ccf-b35b-6740845ef17a.jpeg",
+      "PackagePath": "staticwebassets/images/product/725ef85c-a0e3-4ccf-b35b-6740845ef17a.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/833e6826-d3fb-4a06-8f1d-6a83a2e27582.jpeg",
+      "PackagePath": "staticwebassets/images/product/833e6826-d3fb-4a06-8f1d-6a83a2e27582.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/8c41702e-07a7-4341-b8bb-4644602b095b.png",
+      "PackagePath": "staticwebassets/images/product/8c41702e-07a7-4341-b8bb-4644602b095b.png"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/9cdba409-4add-43a3-8622-f5028cc5501c.webp",
+      "PackagePath": "staticwebassets/images/product/9cdba409-4add-43a3-8622-f5028cc5501c.webp"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/a13aff49-9a8f-4762-966d-44f018b3fda7.png",
+      "PackagePath": "staticwebassets/images/product/a13aff49-9a8f-4762-966d-44f018b3fda7.png"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/b0fe1c39-b866-40a6-bb79-a1e6aa5d44dc.jpeg",
+      "PackagePath": "staticwebassets/images/product/b0fe1c39-b866-40a6-bb79-a1e6aa5d44dc.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/b1b18711-f506-4ff6-935b-f398015debb5.jpg",
+      "PackagePath": "staticwebassets/images/product/b1b18711-f506-4ff6-935b-f398015debb5.jpg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/b4780ce2-e6ed-496f-a377-76efa3a54760.jpeg",
+      "PackagePath": "staticwebassets/images/product/b4780ce2-e6ed-496f-a377-76efa3a54760.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/c99f31b1-5245-4bc6-8fa3-fffd4e9f4918.png",
+      "PackagePath": "staticwebassets/images/product/c99f31b1-5245-4bc6-8fa3-fffd4e9f4918.png"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/ca075619-a2f6-4f1c-be58-485f7f534bff.jpeg",
+      "PackagePath": "staticwebassets/images/product/ca075619-a2f6-4f1c-be58-485f7f534bff.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/cd260559-166c-4fbb-b810-346f737f004b.jpeg",
+      "PackagePath": "staticwebassets/images/product/cd260559-166c-4fbb-b810-346f737f004b.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/d4b935ea-f123-44b8-8975-dca828ce6cce.jpeg",
+      "PackagePath": "staticwebassets/images/product/d4b935ea-f123-44b8-8975-dca828ce6cce.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/d5cfb764-8d9e-4556-8bb0-655575832b34.jpeg",
+      "PackagePath": "staticwebassets/images/product/d5cfb764-8d9e-4556-8bb0-655575832b34.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/product/f643ef0c-56fd-477f-a52c-4d4b5547c65d.jpeg",
+      "PackagePath": "staticwebassets/images/product/f643ef0c-56fd-477f-a52c-4d4b5547c65d.jpeg"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/users/16e0fc80-a648-4f3f-94f9-51658f683618.png",
+      "PackagePath": "staticwebassets/images/users/16e0fc80-a648-4f3f-94f9-51658f683618.png"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/users/1ca62f84-c281-44c3-ae88-9f963b5c6859.webp",
+      "PackagePath": "staticwebassets/images/users/1ca62f84-c281-44c3-ae88-9f963b5c6859.webp"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/users/3f311045-65b3-4c42-bff6-bf634fc48751.png",
+      "PackagePath": "staticwebassets/images/users/3f311045-65b3-4c42-bff6-bf634fc48751.png"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/users/72a11e6e-1ac2-4993-a191-b5cde76c6d70.png",
+      "PackagePath": "staticwebassets/images/users/72a11e6e-1ac2-4993-a191-b5cde76c6d70.png"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/users/8ad0ff1c-5a49-46e7-849f-b03f4a18d8f0.png",
+      "PackagePath": "staticwebassets/images/users/8ad0ff1c-5a49-46e7-849f-b03f4a18d8f0.png"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/users/8cc70a63-f7a9-48a5-8c84-08c834746735.webp",
+      "PackagePath": "staticwebassets/images/users/8cc70a63-f7a9-48a5-8c84-08c834746735.webp"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/users/a341e00d-5c3c-4512-8c4e-aa2a3b182ad0.png",
+      "PackagePath": "staticwebassets/images/users/a341e00d-5c3c-4512-8c4e-aa2a3b182ad0.png"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/images/users/e76627de-9d14-4428-bb96-18d70f61ca76.webp",
+      "PackagePath": "staticwebassets/images/users/e76627de-9d14-4428-bb96-18d70f61ca76.webp"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/js/company.js",
+      "PackagePath": "staticwebassets/js/company.js"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/js/order.js",
+      "PackagePath": "staticwebassets/js/order.js"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/js/product.js",
+      "PackagePath": "staticwebassets/js/product.js"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/js/scrollreveal.min.js",
+      "PackagePath": "staticwebassets/js/scrollreveal.min.js"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/js/swiper-bundle.min.js",
+      "PackagePath": "staticwebassets/js/swiper-bundle.min.js"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/LICENSE",
+      "PackagePath": "staticwebassets/lib/bootstrap"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/Users/admin/Desktop/net/Best/BestApp/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.BestApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.BestApp.props",
+      "PackagePath": "build\\BestApp.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.BestApp.props",
+      "PackagePath": "buildMultiTargeting\\BestApp.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.BestApp.props",
+      "PackagePath": "buildTransitive\\BestApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
